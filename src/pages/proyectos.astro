@@ -1,0 +1,64 @@
+---
+import ToHome from '../components/ToHome.astro';
+import Layout from '../layouts/Layout.astro';
+import content from '../data/info.json';
+import Card from '../components/Card.astro';
+const {projects} = content;
+---
+<Layout title='Proyectos'>
+    <main>
+        <header>
+            <ToHome upperTitle='Portafolio'/>
+            <h1 style={{textAlign: "center"}}>Proyectos</h1>
+        </header>
+        <section>
+            <ul role="list" class="link-card-grid">
+            {
+                projects.map(({title, description,skills,url}) => (
+                    <Card
+                        skills={skills}
+                        href={url}
+                        title={title}
+                        body={description}
+                    />
+                ))
+                }
+            </ul>
+        </section>
+    </main>
+</Layout>
+<style>
+    main {
+		width: 100vw;
+		height: 100vh;
+		color: white;
+		background-color: #acd2ed;
+		font-size: 20px;
+		display: grid;
+        grid-template-rows: 1fr auto;
+		grid-template-columns: 1fr auto;
+		padding: 0 0 1rem 1rem;
+        justify-content: center;
+        
+	}
+    header {
+        grid-column: 1 / span 2;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .gn-txt {
+        color: #14591D;
+    }
+    .medium {
+        font-weight: 400;
+        font-size: 24pt;
+    }
+</style>

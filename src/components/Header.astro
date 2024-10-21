@@ -1,0 +1,57 @@
+---
+import ToHome from './ToHome.astro';
+
+interface Props{
+    title: string;
+    description: string;
+    upperTitle: string;
+    subtitle: string;
+}
+
+const {title, description, upperTitle,subtitle} = Astro.props
+---
+<header>
+    <ToHome upperTitle={upperTitle}/>
+    <div class="v-center">
+        <h1 class="gn-txt bold jumbo">{title}</h1>
+        <p class="gn-txt medium">{description}</p>
+        <p class="gn-txt">{subtitle}</p>
+        <slot />
+    </div>
+</header>
+<style>
+    header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .gn-txt {
+        color: #14591D;
+    }
+    .bold {
+        font-weight: 700;
+    }
+    .medium {
+        font-weight: 400;
+        font-size: 24pt;
+    }
+    .large {
+        font-weight: 700;
+        font-size: 36pt;
+    }
+    .jumbo {
+        font-size:50pt;
+    }
+
+   .v-center {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+</style>

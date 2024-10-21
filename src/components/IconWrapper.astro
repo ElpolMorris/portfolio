@@ -1,0 +1,9 @@
+---
+import Icon from "./Icon.astro";
+import {urls} from "../data/info.json";
+---
+<div>
+    {
+        urls.map(({link,icon}) => (<Icon name={icon} src={link} />))
+    }
+</div>

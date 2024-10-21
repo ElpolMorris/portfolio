@@ -1,0 +1,25 @@
+---
+import ExperienceCard from "./ExperienceCard.astro";
+import {experiences} from "../data/info.json"
+---
+<div>
+    {
+        experiences.map(({
+            title,
+	firm,
+    description,
+	functions,
+	init,
+	end
+        }) => (
+            <ExperienceCard 
+                title={title}
+                firm={firm}
+                description={description}
+                functions={functions}
+                init={init}
+                end={end}
+            />
+        ))
+    }
+</div>

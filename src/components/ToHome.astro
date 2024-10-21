@@ -1,0 +1,40 @@
+---
+interface Props {
+	upperTitle: string;
+	isHome?: boolean;
+}
+const { upperTitle, isHome = true } = Astro.props;
+---
+
+<p class="gn-txt medium">
+	<a href="/">
+		{
+			isHome && (
+				<svg class="icon">
+					<use href="home.svg#home-icon"></use>
+				</svg>
+			)
+		}
+        
+    </a>
+    <a href={isHome ? "/" : "./proyectos"}>{upperTitle} {!isHome && (<span>&rarr;</span>)}</a>
+</p>
+<style>
+	p {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		vertical-align: sub;
+	}
+	.gn-txt {
+		color: #14591d;
+	}
+	.medium {
+		font-weight: 400;
+		font-size: 24pt;
+	}
+	.icon {
+		color: #14591d;
+		width: 24pt;
+		height: 24pt;
+	}
+</style>

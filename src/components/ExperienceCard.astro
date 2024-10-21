@@ -1,0 +1,33 @@
+---
+interface Props {
+    title: string
+	firm: string
+    description: string
+	functions: string[],
+	init: number,
+	end: number
+}
+const { title, firm, description, functions,init,end} = Astro.props
+---
+<div class="card">
+    <h3 style={{paddingBottom: "2px"}}>{title}</h3>
+    <span>Empresa: {firm}</span>
+    <p style={{fontStyle: "italic", paddingBottom: "0.5rem"}}>{description}</p>
+    <p>Tareas realizadas:</p>
+    <ul>
+    {
+        functions.map(f => (<li>{f}</li>))
+    }
+    </ul>
+    <div>
+        <span> {init} - {end}</span>
+    </div>
+</div>
+<style>
+    .card {
+        margin-bottom: 1rem;
+    }
+    li {
+        text-decoration:wavy;   
+    }
+</style>
