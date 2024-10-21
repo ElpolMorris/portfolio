@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ToHome from "../components/ToHome.astro";
+import content from "../data/info.json";
+import WrapperExperience from "../components/WrapperExperience.astro";
+const { about, education } = content;
+---
+
+<Layout title="Quien soy">
+	<main>
+		<header>
+			<ToHome upperTitle="Portafolio" />
+		</header>
+		<section class="col-1">
+			<div>
+				<div class="avatar"></div>
+			</div>
+			<div>
+				{
+				about.split("_").map((text) => (
+					<p>{text}</p>
+				))
+				}
+			</div>
+			<ToHome upperTitle="Ver trabajos" isHome={false} />
+		</section>
+		<section class="col-2">
+			<section>
+				<h2 style={{paddingBottom: "1rem"}}>Trayectoria</h2>
+				<WrapperExperience />
+			</section>
+			<section>
+				<h2>Educación</h2>
+				{
+					education
+						.sort((a, b) => b.start - a.start)
+						.map(({ entity, career, start, end }) => {
+							return (
+								<div>
+									<span>{career}</span>
+									<span>{entity}</span>
+									<div>
+										<span>Inicio: {start}</span>
+										<span>Fin: {end}</span>
+									</div>
+								</div>
+							);
+						})
+				}
+			</section>
+		</section>
+	</main>
+</Layout>
+<style>
+	main {
+		width: 100vw;
+		height: 100vh;
+		color: white;
+		background-color: #acd2ed;
+		font-size: 20px;
+		display: grid;
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 0 1rem 1rem;
+	}
+	header {
+		grid-column: 1 / span 2;
+	}
+	.col-1{
+		grid-column: 1;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.col-1 > :first-child {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.col-2 {
+		grid-column: 2;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.avatar {
+		background-image: url('/avatar.jpeg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+	}
+	p {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	.gn-txt {
+		color: #14591d;
+	}
+	.medium {
+		font-weight: 400;
+		font-size: 24pt;
+	}
+	.flex {
+		display: flex;
+		
+	}
+	.time-line {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #14591d;
+	}
+	.circle {
+		background-color: chocolate;
+		border-radius: 50pt;
+		width: 3rem;
+		height: 3rem;
+	}
+	.line {
+		border-right: 1px solid chocolate;
+		height: 1rem;
+		width: 1rem;
+	}
+</style>

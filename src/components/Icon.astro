@@ -1,0 +1,10 @@
+---
+interface Props {
+    src: string;
+    name: string;
+}
+const {src, name} = Astro.props;
+---
+<a href={src} target="_blank">
+    <img src={`${name}.svg`} alt={name} style={{width: "48px", height: "48px"}}/>
+</a>

@@ -1,0 +1,101 @@
+{
+	"name": "Pablo Morales Pinto",
+	"projects": [
+		{
+			"title": "EPIc Suite GUI",
+			"description": "EPIc Suite es una aplicación de modelado de pandemias de código abierto.",
+			"skills": ["Typescript", "React js", "Figma", "Next JS"],
+			"url": "https://github.com/DLab/epic-suite-gui"
+		},
+		{
+			"title": "KNN scratch with Rust",
+			"description": "Clasificación de suelos (dataset vinos) usando KNN desde scratch con Rust",
+			"skills": ["Rust"],
+			"url": "https://codesandbox.io/p/devbox/wonderful-bouman-36vzkd"
+		},
+		{
+			"title": "A datascience exercise with Python #2",
+			"description": "Ejercicio de data science sobre entidades territoriales y SARS-COV-2",
+			"skills": [
+				"Jupyter Notebook",
+				"Python",
+				"Keras",
+				"Scikit-learn",
+				"Pandas",
+				"Numpy"
+			],
+			"url": "https://drive.google.com/file/d/1AgoA4uXZ0p3CHoR4J4LCt9jnOVrtnqUp/view?usp=sharing"
+		},
+		{
+			"title": "A datascience exercise with Python #1",
+			"description": "Ejercicio de data science sobre datos de ataques de tiburones",
+			"skills": ["Jupyter Notebook", "Python", "Pandas", "Numpy"],
+			"url": "https://drive.google.com/file/d/1LCbE3Zkhj-vS3LHxN-dZvy81K2Bi-6vi/view?usp=sharing"
+		},
+		{
+			"title": "Buscador de constituyentes",
+			"description": "Un buscador de candidatos a la convención constitucional de 2021",
+			"skills": ["React js"],
+			"url": "https://constituyente-fba29.web.app/"
+		}
+	],
+	"job": "Desarrollador Web",
+	"brewDescription": "Entusiasta desarrollador web",
+	"about": "Me llamo Pablo y estoy encantado que visites mi portafolio. Me declaro un entusiasta de la programación desde que estudié geografía y me enfrenté al uso de sistemas de información geográfica (GIS). Encontraba misterioso cómo funcionaban por dentro estas herramientas. A partir de la pandemia aproveché la oportunidad que tuve para aprender Javascript en el Front como en el Back y enfrentarme a nuevos desafíos._ Me gusta aprender y aplicar mi conocimiento a la resolución de algún problema. He trabajado en equipos multidisciplinarios en proyectos tecnológicos compuesto por científicos, ingenieros, diseñadores UX/UI, sociólogos, y varios profesionales que se vieron seducidas por este mundo maravilloso del desarrollo de software y tecnología. Me agrada trabajar en equipo, aprender, y lograr solucionar problemas.",
+	"experiences": [
+		{
+			"title": "EPIc Suite GUI",
+			"firm": "Fundación Ciencia & Vida",
+			"description": "Construcción Interfaz gráfica para proyecto de simulación de contagios por SARS-COV-2",
+			"functions": [
+				"Construcción Interfaz Gráfica de simulador de contagios",
+				"implementación de mapas en la aplicación",
+				"Implementación servicio de Server Side Events (SSE) para el proyecto"
+			],
+			"init": 2021,
+			"end": 2023
+		},
+		{
+			"title": "Curso Desarrollo FullStack en Javascript",
+			"firm": "Desafío Latam",
+			"description": "Ayudante en dos ediciones del curso de desarrollo fullstack en JS",
+			"functions": [
+				"Asistencia de dudas de la materia o contenido tratado",
+				"Revisión de tareas de código semanales",
+				"Asistencia a docente en caso de ausencias"
+			],
+			"init": 2021,
+			"end": 2021
+		}
+	],
+	"education": [
+		{
+			"entity": "Universidad de Chile",
+			"career": "Licenciatura en Geografía",
+			"start": 2013,
+			"end": 2019
+		},
+		{
+			"entity": "Desafío Latam",
+			"career": "Curso Desarrollo FullStack en Javascript",
+			"start": 2020,
+			"end": 2021
+		},
+		{
+			"entity": "Desafío Latam",
+			"career": "Curso React JS",
+			"start": 2021,
+			"end": 2021
+		}
+	],
+	"urls": [
+        { 
+            "link":"https://github.com/ElpolMorris",
+            "icon":"github"
+        },
+        {
+            "link":  "https://www.linkedin.com/in/pablo-morales-pinto/",
+            "icon":"linkedin"
+        }
+    ]
+}

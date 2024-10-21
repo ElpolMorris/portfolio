@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import IconWrapper from '../components/IconWrapper.astro';
+import content from '../data/info.json';
+const {name,job, brewDescription} = content;
+
+---
+
+<Layout title="Portafolio">
+	<main>
+		<Header 
+			title={name}
+			description={job}
+			upperTitle='Portafolio'
+			subtitle={brewDescription}
+		>
+			<IconWrapper />
+		</Header>
+		<section>
+			<div class="curved-box"><span id="init-button"><a href="./trayectoria">Empecemos</a></span></div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 100vw;
+		height: 100vh;
+		color: white;
+		background-color: #acd2ed;
+		font-size: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 0 1rem 1rem;
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: end;
+		min-height: 100vh;
+	}
+	.curved-box {
+		width: 80%;
+		height: 80%;
+		background-color: #99AA38;
+		border-top-left-radius: 200%; /* Esquina superior izquierda sin curva */
+		border-top-right-radius: 0; /* Curva en la esquina superior derecha */
+		border-bottom-left-radius: 0; /* Curva en la esquina inferior izquierda */
+		border-bottom-right-radius: 0;
+		display: flex; /* Activa flexbox para el contenido interno */
+		justify-content: right; /* Alinea el texto horizontalmente */
+		align-items: end; /* Alinea el texto verticalmente */
+		flex-shrink: 0;
+		text-align: center; /* Opcional: centra el texto si es multilinea */
+		color: white; /* Color del texto para que sea visible */
+		font-size: 34px;
+	}
+	.curved-box > span {
+		padding-bottom: 5rem;
+		padding-right: 5rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: normal;
+	font-style: normal;
+	outline: none;
+	}
+</style>
+<script>
+	const initButton = document.querySelectorAll("#init-button")[0]
+	initButton.addEventListener("click",(e) => {
+		console.log(e.target)
+	})
+</script>
