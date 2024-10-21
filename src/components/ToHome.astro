@@ -7,17 +7,17 @@ const { upperTitle, isHome = true } = Astro.props;
 ---
 
 <p class="gn-txt medium">
-	<a href="/">
+	<a href="/portfolio">
 		{
 			isHome && (
 				<svg class="icon">
-					<use href="home.svg#home-icon"></use>
+					<use href="/home.svg#home-icon"></use>
 				</svg>
 			)
 		}
         
     </a>
-    <a href={isHome ? "/" : "./proyectos"}>{upperTitle} {!isHome && (<span>&rarr;</span>)}</a>
+    <a href={isHome ? "/portfolio" : "/portfolio/proyectos"}>{upperTitle} {!isHome && (<span>&rarr;</span>)}</a>
 </p>
 <style>
 	p {
