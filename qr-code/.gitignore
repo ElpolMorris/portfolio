@@ -1,0 +1,15 @@
+# Compiled output
+/target/
+
+# Backup files
+*.rs.bk
+
+# Logs
+*.log
+
+# Swap files for editors
+*.swp
+*.swo
+
+# Cargo.lock (only for libraries)
+Cargo.lock
