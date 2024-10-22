@@ -53,5 +53,12 @@ const {title, description, upperTitle,subtitle} = Astro.props
         justify-content: center;
         flex-direction: column;
     }
-
+    @media (max-width: 767px) {
+        header {
+            min-height: 80vh;
+        }
+        .v-center {
+            text-align: center;
+        }
+    }
 </style>

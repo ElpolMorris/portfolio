@@ -100,6 +100,39 @@ const {name,job, brewDescription} = content;
 	font-style: normal;
 	outline: none;
 	}
+	/* Estilo para pantallas grandes */
+
+
+
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr; /* 1 columna */
+	grid-template-rows: 85vh 15vh;
+
+  }
+  section {
+	grid-row: 2;
+	justify-content: center;
+	align-items: start;
+	min-height: 20vh;
+  }
+  .curved-box {
+	width: 100%;
+	border-top-left-radius: 10%; /* Esquina superior izquierda sin curva */
+	border-top-right-radius: 10%; /* Curva en la esquina superior derecha */
+	border-bottom-left-radius: 10%; /* Curva en la esquina inferior izquierda */
+	border-bottom-right-radius: 10%;
+	justify-content: center;
+	align-items: start;
+  }
+  .curved-box > span {
+		padding-top: 2rem;
+		padding-right: 1rem;
+
+	}
+}
 </style>
 <script>
 	const initButton = document.querySelectorAll("#init-button")[0]
