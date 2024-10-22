@@ -4,6 +4,7 @@ import ToHome from "../components/ToHome.astro";
 import content from "../data/info.json";
 import WrapperExperience from "../components/WrapperExperience.astro";
 const { about, education } = content;
+const avatarUrl = `${import.meta.env.BASE_URL}avatar.jpeg`
 ---
 
 <Layout title="Quien soy">
@@ -13,7 +14,7 @@ const { about, education } = content;
 		</header>
 		<section class="col-1">
 			<div>
-				<div class="avatar"></div>
+				<div class="avatar" style={`--avatar-url: url('${avatarUrl}');`}></div>
 			</div>
 			<div>
 				{
@@ -83,7 +84,7 @@ const { about, education } = content;
 		padding-right: 2rem;
 	}
 	.avatar {
-		background-image: url(`${import.meta.env.BASE_URL}avatar.jpeg`);
+		background-image: var(--avatar-url);
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 250px;
