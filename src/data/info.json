@@ -5,7 +5,7 @@
 			"title": "EPIc Suite GUI",
 			"description": "EPIc Suite es una aplicación de modelado de pandemias de código abierto.",
 			"skills": ["Typescript", "React js", "Figma", "Next JS"],
-			"url": "https://github.com/DLab/epic-suite-gui"
+			"url":"https://apps.cienciavida.org/epic"
 		},
 		{
 			"title": "KNN scratch with Rust",
